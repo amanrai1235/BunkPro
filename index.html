@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Current Attendance -->
+    <div class="card">
+        <h3>📱 Current Attendance</h3>
+        <p class="sub">
+            Enter your current lecture statistics to calculate attendance percentage
+        </p>
+
+        <div class="row">
+            <div>
+                <label>Total Lectures</label>
+                <input type="number" id="totalLectures" value="0">
+            </div>
+            <div>
+                <label>Present Lectures</label>
+                <input type="number" id="presentLectures" value="0">
+            </div>
+        </div>
+
+        <button onclick="calcCurrent()">Calculate</button>
+        <p class="result" id="currentResult">Attendance: 0%</p>
+    </div>
+
+    <!-- Future Attendance Planning -->
+    <div class="card">
+        <h3>📈 Future Attendance Planning</h3>
+        <p class="sub">
+            Plan your upcoming attendance based on your current attendance
+        </p>
+
+        <label>Working Days</label>
+        <input type="number" id="workingDays" value="0">
+
+        <label>Lectures Per Day</label>
+        <input type="number" id="lecPerDay" value="6">
+
+        <label>Lectures Per Day You Plan to Attend</label>
+        <input type="number" id="planAttend" value="0">
+
+        <button onclick="calcFuture()">Calculate</button>
+    </div>
+
+    <!-- Future Attendance Projection -->
+<div class="card" id="projectionCard" style="display:none;">
+    <h3>📊 Future Attendance Projection</h3>
+
+    <div class="grid">
+        <div>
+            <p class="label">Current Lectures</p>
+            <p id="pCurrentTotal">0</p>
+        </div>
+        <div>
+            <p class="label">Future Lectures</p>
+            <p id="pFutureTotal">0</p>
+        </div>
+
+        <div>
+            <p class="label">Total After Future</p>
+            <p id="pFinalTotal">0</p>
+        </div>
+        <div>
+            <p class="label">Current Present</p>
+            <p id="pCurrentPresent">0</p>
+        </div>
+
+        <div>
+            <p class="label">Future Present</p>
+            <p id="pFuturePresent">0</p>
+        </div>
+        <div>
+            <p class="label">Total Present After</p>
+            <p id="pFinalPresent">0</p>
+        </div>
+    </div>
+
+    <div class="status-box">
+        <div class="status-head">
+            <span>Projected Attendance</span>
+            <span class="badge" id="statusBadge">Good</span>
+        </div>
+
+        <p class="percent" id="projectedPercent">0%</p>
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="status-footer">
+            <span>Total Present: <b id="totalPresentText">0</b></span>
+            <span>Total Absent: <b id="totalAbsentText">0</b></span>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="container">
+   <footer class="footer">
+       <p class="footer-name">Made with ❤️ by <span>Aman Kumar Rai</span></p>
+       <p class="footer-sub">B.Tech CSE Student</p>
+
+       <div class="footer-links">
+           <a href="https://github.com/amanrai1235" target="_blank">GitHub</a>
+           <a href="https://www.linkedin.com/in/aman-kumar-rai-b4019b315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+           <a href="mailto:aman.kumar.rai1203@gmail.com">Email</a>
+       </div>
+
+       <p class="footer-copy">© 2026 Attendance Calculator. All rights reserved.</p>
+   </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
