@@ -7,12 +7,10 @@
 
 /* ---------- BODY LAYOUT ---------- */
 body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0f172a, #020617);
-    color: #e5e7eb;
-
+    margin: 0;
+    padding-top: 90px; /* header ke liye */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .main-header {
@@ -42,23 +40,16 @@ body {
 
 /* ---------- MAIN CONTAINER ---------- */
 .container {
-    width: 380px;
-    max-width: 100%;
-    margin: 32px auto 0;
-    padding: 0 14px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* ---------- CARD ---------- */
 .card {
-    background: #020617;
-    border: 1px solid #1e293b;
-    border-radius: 20px;
-    padding: 22px;
-    margin-bottom: 22px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.6),
-        inset 0 1px 0 rgba(255,255,255,0.04);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
 }
 
 /* ---------- HEADINGS ---------- */
